@@ -1,0 +1,129 @@
+CREATE TABLE "AuthProvider" (
+    "AuthProviderID" VARCHAR2(255) NOT NULL,
+    "ProviderName" VARCHAR2(20) NULL,
+    "ProviderType" VARCHAR2(20) NULL,
+    PRIMARY KEY ("AuthProviderID")
+);
+
+CREATE TABLE "Users" (
+    "UserID" VARCHAR2(30) NOT NULL,
+    "UserName" VARCHAR2(20) NOT NULL,
+    "Nickname" VARCHAR2(30) NULL,
+    "Password" VARCHAR2(50) NOT NULL,
+    "Phone" VARCHAR2(20) NULL,
+    "Email" VARCHAR2(255) UNIQUE NOT NULL,
+    "AuthProviderID" VARCHAR2(255) NOT NULL,
+    PRIMARY KEY ("UserID"),
+    FOREIGN KEY ("AuthProviderID") REFERENCES "AuthProvider" ("AuthProviderID")
+);
+
+CREATE TABLE "community" (
+    "Community_id" VARCHAR2(255) NOT NULL,
+    "com_num" NUMBER NULL,
+    "com_title" VARCHAR2(30) NULL,
+    "com_content" VARCHAR2(4000) NULL,
+    "com_image" VARCHAR2(50) NULL,
+    "com_regdate" DATE NULL,
+    "com_update" DATE NULL,
+    "com_like" NUMBER NULL,
+    "UserID" VARCHAR2(30) NOT NULL,
+    PRIMARY KEY ("Community_id"),
+    FOREIGN KEY ("UserID") REFERENCES "Users" ("UserID")
+);
+
+CREATE TABLE "community_reply" (
+    "com_reply_index" NUMBER NOT NULL,
+    "community_id" VARCHAR2(255) NOT NULL,
+    "com_reply_regdate" DATE NOT NULL,
+    "com_reply_content" VARCHAR2(100) NULL,
+    "com_reply_update" DATE NULL,
+    "UserID" VARCHAR2(30) NOT NULL,
+    PRIMARY KEY ("com_reply_index"),
+    FOREIGN KEY ("community_id") REFERENCES "community" ("Community_id"),
+    FOREIGN KEY ("UserID") REFERENCES "Users" ("UserID")
+);
+
+CREATE TABLE "Chatroom" (
+    "chat_index" NUMBER NOT NULL,
+    "chat_state" VARCHAR2(100) NULL,
+    "Create_Time" DATE NULL,
+    "Update_Time" DATE NULL,
+    "UserID" VARCHAR2(30) NOT NULL,
+    PRIMARY KEY ("chat_index"),
+    FOREIGN KEY ("UserID") REFERENCES "Users" ("UserID")
+);
+
+CREATE TABLE "SocialLogin" (
+    "SocialID" VARCHAR2(255) NOT NULL,
+    "Provider" VARCHAR2(50) NOT NULL,
+    "ProviderID" VARCHAR2(50) NOT NULL,
+    "AccesToken" VARCHAR2(255) NOT NULL,
+    "UserID" VARCHAR2(30) NOT NULL,
+    PRIMARY KEY ("SocialID"),
+    FOREIGN KEY ("UserID") REFERENCES "Users" ("UserID")
+);
+
+CREATE TABLE "UserConsent" (
+    "ConsentID" VARCHAR2(50) NOT NULL,
+    "ConsentType" VARCHAR2(40) NOT NULL,
+    "ConsentGiven" NUMBER(1) NOT NULL,  -- BOOLEAN을 NUMBER(1)로 변경
+    "ConsentDate" DATE NOT NULL,
+    "UserID" VARCHAR2(30) NOT NULL,
+    PRIMARY KEY ("ConsentID"),
+    FOREIGN KEY ("UserID") REFERENCES "Users" ("UserID")
+);
+
+CREATE TABLE "Withdrawal" (
+    "Withdrawal_ID" VARCHAR2(255) NOT NULL,
+    "WithdrawalDate" DATE NOT NULL,
+    "IsDataRetained" NUMBER(1) NOT NULL,  -- BOOLEAN을 NUMBER(1)로 변경
+    "UserID" VARCHAR2(30) NOT NULL,
+    PRIMARY KEY ("Withdrawal_ID"),
+    FOREIGN KEY ("UserID") REFERENCES "Users" ("UserID")
+);
+
+CREATE TABLE "PasswordReset" (
+    "PRequestID" VARCHAR2(255) NOT NULL,
+    "PResetToken" VARCHAR2(255) NOT NULL,
+    "PRequestDate" DATE NOT NULL,
+    "PExpirationDate" DATE NOT NULL,
+    "UserID" VARCHAR2(30) NOT NULL,
+    PRIMARY KEY ("PRequestID"),
+    FOREIGN KEY ("UserID") REFERENCES "Users" ("UserID")
+);
+
+CREATE TABLE "EmailVerification" (
+    "VerificationID" VARCHAR2(255) NOT NULL,
+    "VerificationToken" VARCHAR2(255) NULL,
+    "VRequestDate" DATE NULL,
+    "VExpirationDate" DATE NULL,
+    "IsVerified" NUMBER(1) NULL,  -- BOOLEAN을 NUMBER(1)로 변경
+    "UserID" VARCHAR2(30) NOT NULL,
+    PRIMARY KEY ("VerificationID"),
+    FOREIGN KEY ("UserID") REFERENCES "Users" ("UserID")
+);
+
+CREATE TABLE "Massage" (
+    "m_index" NUMBER NOT NULL,
+    "m_content" VARCHAR2(255) NULL,
+    "m_create_time" DATE NULL,
+    "chat_index" NUMBER NULL,
+    PRIMARY KEY ("m_index"),
+    FOREIGN KEY ("chat_index") REFERENCES "Chatroom" ("chat_index")
+);
+
+CREATE TABLE "food" (
+    "game_index" NUMBER NOT NULL,
+    "food_name" VARCHAR2(255) NULL,
+    "time" VARCHAR2(255) NULL,
+    "img_path" VARCHAR2(255) NULL,
+    PRIMARY KEY ("game_index")
+);
+
+CREATE TABLE "Rank" (
+    "UserID" VARCHAR2(30) NOT NULL,
+    "Food_Cnt" NUMBER NULL,
+    "Game_play" NUMBER(1) NULL,  -- BOOLEAN을 NUMBER(1)로 변경
+    PRIMARY KEY ("UserID"),
+    FOREIGN KEY ("UserID") REFERENCES "Users" ("UserID")
+);
