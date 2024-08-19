@@ -9,5 +9,7 @@
 <body>
 
 <!-- 쿠킹일지 메인 페이지   -->
+<h1> community main page</h1>
+
 </body>
 </html>
