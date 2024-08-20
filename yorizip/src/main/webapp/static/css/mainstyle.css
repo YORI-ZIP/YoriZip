@@ -1,0 +1,843 @@
+@charset "utf-8";
+
+/* 커뮤니티 */
+.container{
+position: relative;
+width: 1440px;
+height: 2625px;
+
+background: #FFFFFF;
+}
+
+/* 모락 모락 쿠킹 일지 */
+.main_title {
+position: absolute;
+width: 274px;
+height: 47px;
+left: 110px;
+top: 578px;
+
+font-family: 'Pretendard';
+font-style: normal;
+font-weight: 700;
+font-size: 36px;
+line-height: 130%;
+
+color: #000000;
+}
+
+/* 123,456 */
+.main_title_num{
+position: absolute;
+width: 126px;
+height: 42px;
+left: 300px;
+top: 5px;
+
+font-family: 'Pretendard';
+font-style: normal;
+font-weight: 700;
+font-size: 32px;
+line-height: 130%;
+/* identical to box height, or 42px */
+
+color: #2EAE65;
+}
+
+/* 쿠킹일지로 넘어가기 */
+.cooking_daily{
+position: absolute;
+width: 26px;
+height: 26px;
+left: 150px;
+top: 0px;
+
+color: #000000;
+}
+
+/* 모두보기 박스 */
+.list_box{
+position: absolute;
+width: 1217px;
+height: 84.6px;
+left: 115px;
+top: 1227px;
+
+background: #F2EADF;
+border-radius: 14.3654px;
+}
+
+/* 모두 보기 */
+.list_box_content{
+position: absolute;
+left: 570px;
+top: 25px;
+
+font-family: 'Pretendard';
+font-style: normal;
+font-weight: 700;
+font-size: 32px;
+line-height: 38px;
+
+color: #7A5F5F;
+
+}
+
+/* 작성하기 박스 */
+.insert_box{
+position: absolute;
+width: 1217px;
+height: 84.6px;
+left: 115px;
+top: 1355px;
+
+background: #967748;
+border-radius: 14.3654px;
+}
+
+/* 작성하기 */
+.insert_box_content{
+position: absolute;
+width: 130px;
+height: 38px;
+left: 570px;
+top: 25px;
+text-decoration-line: none;
+
+font-family: 'Pretendard';
+font-style: normal;
+font-weight: 700;
+font-size: 32px;
+line-height: 38px;
+
+color: #FFFFFF;
+}
+
+/* 이미지 1 */
+.img_box1 {
+position: absolute;
+width: 472.84px;
+height: 472.84px;
+left: 110px;
+top: 677px;
+
+background: url(/images/1.png);
+border-radius: 8.72401px;
+
+text-decoration-line: none;
+}
+
+/* 이미지 2 */
+.img_box2 {
+position: absolute;
+width: 214.61px;
+height: 214.61px;
+left: 618.38px;
+top: 677px;
+
+background: url(/images/2.png);
+border-radius: 3.95961px;
+}
+
+/* 이미지 3 */
+.img_box3 {
+position: absolute;
+width: 214.61px;
+height: 214.61px;
+left: 867.88px;
+top: 677px;
+
+background: url(/images/3.png);
+border-radius: 3.95961px;
+}
+
+/* 이미지 4 */
+.img_box4 {
+position: absolute;
+width: 214.61px;
+height: 214.61px;
+left: 1117.39px;
+top: 677px;
+
+background: url(/images/4.png);
+border-radius: 3.95961px;
+}
+
+/* 이미지 5 */
+.img_box5 {
+position: absolute;
+width: 214.61px;
+height: 214.61px;
+left: 618.38px;
+top: 935.23px;
+
+background: url(/images/5.png);
+border-radius: 3.95961px;
+}
+
+/* 이미지 6 */
+.img_box6 {
+position: absolute;
+width: 214.61px;
+height: 214.61px;
+left: 867.88px;
+top: 935.23px;
+
+background: url(/images/6.png);
+border-radius: 3.95961px;
+}
+
+/* 이미지 7 */
+.img_box7 {
+position: absolute;
+width: 214.61px;
+height: 214.61px;
+left: 1117.39px;
+top: 935.23px;
+
+background: url(/images/7.png);
+border-radius: 3.95961px;
+}
+
+/* 인플루언서 박스 */
+.influencers_box{
+position: absolute;
+width: 1317px;
+height: 578.47px;
+left: 65px;
+top: 1552px;
+}
+
+
+/* 찜한 일지 확인하기 */
+.recommand_influencers_list{
+position: absolute;
+width: 424.02px;
+height: 94.47px;
+left: 791px;
+top: 2036px;
+}
+
+
+/* 찜한 일지 박스 */
+.recommand_influencers_box {
+position: absolute;
+width: 424.02px;
+height: 94.47px;
+left: 791px;
+top: 2036px;
+
+background: #F8F6F3;
+border-radius: 10.4844px;
+}
+
+/* 찜한 일지 확인하기 */
+.recommand_influencers_content {
+position: absolute;
+width: 176px;
+height: 28px;
+left: 913.74px;
+top: 2068.73px;
+
+font-family: 'Pretendard';
+font-style: normal;
+font-weight: 700;
+font-size: 23.8046px;
+line-height: 28px;
+
+color: #7A5F5F;
+}
+
+/* 더 많은 인플루언서 구경하기 */
+.influencers_list {
+position: absolute;
+width: 439.64px;
+height: 94.47px;
+left: 229px;
+top: 2036px;
+}
+
+/* Rectangle 227 */
+.influencers_list_box {
+position: absolute;
+width: 439.64px;
+height: 94.47px;
+left: 229px;
+top: 2036px;
+
+background: #DCDCDC;
+border-radius: 10.4844px;
+}
+
+/* 더 많은 밥플루언서 구경하기 */
+.influencers_list_content {
+position: absolute;
+width: 264px;
+height: 28px;
+left: 322.73px;
+top: 2068.73px;
+
+font-family: 'Pretendard';
+font-style: normal;
+font-weight: 700;
+font-size: 23.8046px;
+line-height: 28px;
+
+color: #484848;
+}
+
+/* 인플루언서1 박스 */
+.influencers1_box {
+position: absolute;
+width: 151px;
+height: 170px;
+left: 84px;
+top: 1784px;
+}
+
+
+/* 이미지1 */
+.influencers1_image {
+position: absolute;
+width: 122px;
+height: 122px;
+left: 84px;
+top: 1789px;
+
+background: url(image.png);
+filter: drop-shadow(0px 0px 4.8px rgba(0, 0, 0, 0.53));
+}
+
+/* Group */
+.influencers1_list_count {
+position: absolute;
+width: 72px;
+height: 36px;
+left: 163px;
+top: 1784px;
+}
+
+
+/* Rectangle 228 */
+.influencers1_list_count_box {
+position: absolute;
+width: 72px;
+height: 36px;
+left: 163px;
+top: 1784px;
+
+background: #FF7105;
+border-radius: 21px;
+}
+
+/* 인플루언서3 박스 */
+.influencers3_box {
+position: absolute;
+width: 155px;
+height: 170px;
+left: 470px;
+top: 1784px;
+}
+
+/* 이미지3 */
+.influencers3_image {
+position: absolute;
+width: 122px;
+height: 122px;
+left: 470px;
+top: 1789px;
+
+background: url(image.png);
+filter: drop-shadow(0px 0px 4.8px rgba(0, 0, 0, 0.53));
+}
+
+
+/* Group 48 */
+.influencers3_list_count {
+position: absolute;
+width: 72px;
+height: 36px;
+left: 553px;
+top: 1784px;
+}
+
+
+/* Rectangle 228 */
+.influencers3_list_count_box {
+position: absolute;
+width: 72px;
+height: 36px;
+left: 553px;
+top: 1784px;
+
+background: #FF7105;
+border-radius: 21px;
+}
+
+/* 인플루언서5 박스 */
+.influencers5_box {
+position: absolute;
+width: 147px;
+height: 170px;
+left: 856px;
+top: 1784px;
+}
+
+/* 이미지5 */
+.influencers5_image {
+position: absolute;
+width: 122px;
+height: 122px;
+left: 856px;
+top: 1789px;
+
+background: url(image.png);
+filter: drop-shadow(0px 0px 4.8px rgba(0, 0, 0, 0.53));
+}
+
+/* Group 49 */
+.influencers5_box {
+position: absolute;
+width: 72px;
+height: 36px;
+left: 931px;
+top: 1784px;
+}
+
+/* Rectangle 228 */
+
+position: absolute;
+width: 72px;
+height: 36px;
+left: 931px;
+top: 1784px;
+
+background: #FF7105;
+border-radius: 21px;
+
+
+/* 인플루언서6 박스 */
+
+position: absolute;
+width: 143px;
+height: 170px;
+left: 1049px;
+top: 1784px;
+
+
+
+/* 이미지6 */
+
+position: absolute;
+width: 122px;
+height: 122px;
+left: 1049px;
+top: 1789px;
+
+background: url(image.png);
+filter: drop-shadow(0px 0px 4.8px rgba(0, 0, 0, 0.53));
+
+
+/* 6 */
+
+position: absolute;
+width: 52px;
+height: 24px;
+left: 1084px;
+top: 1930px;
+
+font-family: 'Pretendard';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 24px;
+/* identical to box height */
+
+color: #000000;
+
+
+
+/* Group 52 */
+
+position: absolute;
+width: 72px;
+height: 36px;
+left: 1120px;
+top: 1784px;
+
+
+
+/* Rectangle 228 */
+
+position: absolute;
+width: 72px;
+height: 36px;
+left: 1120px;
+top: 1784px;
+
+background: #FF7105;
+border-radius: 21px;
+
+
+/* + 100 */
+
+position: absolute;
+width: 54px;
+height: 24px;
+left: 1129px;
+top: 1790px;
+
+font-family: 'Pretendard';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 24px;
+/* identical to box height */
+
+color: #FFFFFF;
+
+
+
+/* 인플루언서7 박스 */
+
+position: absolute;
+width: 140px;
+height: 170px;
+left: 1242px;
+top: 1784px;
+
+
+
+/* 이미지7 */
+
+position: absolute;
+width: 122px;
+height: 122px;
+left: 1242px;
+top: 1789px;
+
+background: url(image.png);
+filter: drop-shadow(0px 0px 4.8px rgba(0, 0, 0, 0.53));
+
+
+/* 7 */
+
+position: absolute;
+width: 52px;
+height: 24px;
+left: 1277px;
+top: 1930px;
+
+font-family: 'Pretendard';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 24px;
+/* identical to box height */
+
+color: #000000;
+
+
+
+/* Group 50 */
+
+position: absolute;
+width: 72px;
+height: 36px;
+left: 1310px;
+top: 1784px;
+
+
+
+/* Rectangle 228 */
+
+position: absolute;
+width: 72px;
+height: 36px;
+left: 1310px;
+top: 1784px;
+
+background: #FF7105;
+border-radius: 21px;
+
+
+/* + 100 */
+
+position: absolute;
+width: 54px;
+height: 24px;
+left: 1319px;
+top: 1790px;
+
+font-family: 'Pretendard';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 24px;
+/* identical to box height */
+
+color: #FFFFFF;
+
+
+
+/* 인플루언서2 박스 */
+
+position: absolute;
+width: 153px;
+height: 170px;
+left: 277px;
+top: 1784px;
+
+
+
+/* 이미지2 */
+
+position: absolute;
+width: 122px;
+height: 122px;
+left: 277px;
+top: 1789px;
+
+background: url(image.png);
+filter: drop-shadow(0px 0px 4.8px rgba(0, 0, 0, 0.53));
+
+/* Group 46 */
+
+position: absolute;
+width: 72px;
+height: 36px;
+left: 358px;
+top: 1784px;
+
+
+
+/* Rectangle 229 */
+
+position: absolute;
+width: 72px;
+height: 36px;
+left: 358px;
+top: 1784px;
+
+background: #FF7105;
+border-radius: 21px;
+
+
+
+/* 인플루언서4 박스 */
+
+position: absolute;
+width: 157px;
+height: 170px;
+left: 663px;
+top: 1784px;
+
+
+
+/* 이미지4 */
+
+position: absolute;
+width: 122px;
+height: 122px;
+left: 663px;
+top: 1789px;
+
+background: url(image.png);
+filter: drop-shadow(0px 0px 4.8px rgba(0, 0, 0, 0.53));
+
+
+/* 4 */
+
+position: absolute;
+width: 52px;
+height: 24px;
+left: 698px;
+top: 1930px;
+
+font-family: 'Pretendard';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 24px;
+/* identical to box height */
+
+color: #000000;
+
+
+
+/* Group 51 */
+
+position: absolute;
+width: 72px;
+height: 36px;
+left: 748px;
+top: 1784px;
+
+
+
+/* Rectangle 229 */
+
+position: absolute;
+width: 72px;
+height: 36px;
+left: 748px;
+top: 1784px;
+
+background: #FF7105;
+border-radius: 21px;
+
+
+/* + 300 */
+
+position: absolute;
+width: 57px;
+height: 24px;
+left: 755px;
+top: 1790px;
+
+font-family: 'Pretendard';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 24px;
+/* identical to box height */
+
+color: #FFFFFF;
+
+
+
+/* 더 많은 인플루언서 팔로우 */
+
+position: absolute;
+width: 232px;
+height: 24px;
+left: 1122px;
+top: 1695px;
+
+
+
+/* 더 많은 밥플루언서 팔로우 */
+.more_influencers {
+position: absolute;
+width: 205px;
+height: 24px;
+left: 1122px;
+top: 1695px;
+
+font-family: 'Pretendard';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 24px;
+
+color: #1D1D1D;
+}
+
+/* 추천 밥플루언서 */
+.recommended_influencers {
+position: absolute;
+width: 201px;
+height: 38px;
+left: 82px;
+top: 1687px;
+
+font-family: 'Pretendard';
+font-style: normal;
+font-weight: 700;
+font-size: 32px;
+line-height: 38px;
+
+color: #000000;
+}
+
+
+/* 미니게임 박스 */
+
+position: absolute;
+width: 1298px;
+height: 96px;
+left: 65px;
+top: 1552px;
+
+
+
+/* 미니게임 박스 넘어가기 */
+
+position: absolute;
+width: 1272px;
+height: 69px;
+left: 91px;
+top: 1579px;
+
+
+
+/* Rectangle 238 */
+
+position: absolute;
+width: 1272px;
+height: 69px;
+left: 91px;
+top: 1579px;
+
+background: #967748;
+border-radius: 9px;
+
+
+/* 08.19~09.18 기간 한정 미니게임 즐기기 */
+
+position: absolute;
+width: 396px;
+height: 29px;
+left: 542px;
+top: 1596px;
+
+font-family: 'Pretendard';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 29px;
+/* identical to box height */
+
+color: #FFFBFB;
+
+
+
+/* Hot */
+
+position: absolute;
+width: 72px;
+height: 72px;
+left: 65px;
+top: 1552px;
+
+
+
+/* Star 1 */
+
+position: absolute;
+width: 72px;
+height: 72px;
+left: 65px;
+top: 1552px;
+
+background: #FFDD00;
+border-radius: 7px;
+
+
+/* Hot */
+
+position: absolute;
+width: 25px;
+height: 18px;
+left: 88px;
+top: 1579px;
+
+font-family: 'Pretendard';
+font-style: normal;
+font-weight: 600;
+font-size: 15px;
+line-height: 18px;
+/* identical to box height */
+
+color: #FF0004;
+
