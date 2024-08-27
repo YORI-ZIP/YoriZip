@@ -25,15 +25,44 @@ public class HomeController {
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
 		logger.info("Welcome home! The client locale is {}.", locale);
-		
+
 		Date date = new Date();
 		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
-		
+
 		String formattedDate = dateFormat.format(date);
-		
+
 		model.addAttribute("serverTime", formattedDate );
-		
-		return "home";
+
+		return "/minigame/Index";
 	}
-	
-}
+	@RequestMapping(value = "/Index.jsp", method = RequestMethod.POST)
+	public String Index(Locale locale, Model model) {
+		logger.info("Index 성공", locale);
+
+		return "/minigame/Index";
+	}
+		// 기존 GET 메서드
+		@RequestMapping(value = "/Main", method = RequestMethod.GET)
+		public String mainGet(Locale locale, Model model) {
+			// GET 요청 처리 로직
+			return "minigame/Main";  // JSP 파일 경로 반환
+		}
+
+		// POST 요청 처리 메서드 추가
+		@RequestMapping(value = "/Main.jsp", method = RequestMethod.POST)
+		public String mainPost(Locale locale, Model model) {
+			// POST 요청 처리 로직
+			return "minigame/Main";  // JSP 파일 경로 반환
+		}
+
+	@RequestMapping(value = "/result", method = RequestMethod.GET)
+	public String result(Locale locale, Model model) {
+
+		return "/minigame/result";
+	}
+
+
+	}
+
+
+

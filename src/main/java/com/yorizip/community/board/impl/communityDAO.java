@@ -28,27 +28,27 @@ public class communityDAO {
 	
 	public void insertBoard(communityVO vo) {
 		
-		System.out.println("===> Mybatis·Î insertBoard() ±â´É Ã³¸®");
+		System.out.println("===> Mybatisï¿½ï¿½ insertBoard() ï¿½ï¿½ï¿½ Ã³ï¿½ï¿½");
 		mybatis.insert("BoardDAO.insertBoard", vo);
 	}
 
 	public void updateBoard(communityVO vo) {
-		System.out.println("===> Mybatis·Î updateBoard() ±â´É Ã³¸®");
+		System.out.println("===> Mybatisï¿½ï¿½ updateBoard() ï¿½ï¿½ï¿½ Ã³ï¿½ï¿½");
 		mybatis.update("BoardDAO.updateBoard", vo);
 	}
 
 	public void deleteBoard(communityVO vo) {
-		System.out.println("===> Mybatis·Î deleteBoard() ±â´É Ã³¸®");
+		System.out.println("===> Mybatisï¿½ï¿½ deleteBoard() ï¿½ï¿½ï¿½ Ã³ï¿½ï¿½");
 		mybatis.delete("BoardDAO.deleteBoard", vo);
 	}
 
 	public communityVO getBoard(communityVO vo) {
-		System.out.println("===> Mybatis·Î getBoard() ±â´É Ã³¸®");
+		System.out.println("===> Mybatisï¿½ï¿½ getBoard() ï¿½ï¿½ï¿½ Ã³ï¿½ï¿½");
 		return (communityVO) mybatis.selectOne("BoardDAO.getBoard", vo);
 	}
 
 	public List<communityVO> getBoardList(communityVO vo) {
-		System.out.println("===> Mybatis·Î getBoardList() ±â´É Ã³¸®");
+		System.out.println("===> Mybatisï¿½ï¿½ getBoardList() ï¿½ï¿½ï¿½ Ã³ï¿½ï¿½");
 		return mybatis.selectList("BoardDAO.getBoardList", vo);
 	}
 	
