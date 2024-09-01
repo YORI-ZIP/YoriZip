@@ -1,4 +1,4 @@
-package com.yorizip.community.view.controller;
+package com.yorizip.myapp.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -6,8 +6,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.yorizip.community.board.communityService;
-import com.yorizip.community.board.communityVO;
+import com.yorizip.myapp.community.board.communityService;
+import com.yorizip.myapp.community.board.communityVO;
 
 @Repository
 public class BoardController {

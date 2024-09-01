@@ -1,4 +1,4 @@
-package com.yorizip.community.board.impl;
+package com.yorizip.myapp.community.Impl;
 
 import java.io.File;
 import java.util.List;
@@ -8,14 +8,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.yorizip.community.board.SqlSessionFactoryBean;
-import com.yorizip.community.board.communityVO;
+import com.yorizip.myapp.community.board.SqlSessionFactoryBean;
+import com.yorizip.myapp.community.board.communityVO;
 
 @Repository("communityDAO")
 public class communityDAO {
 	
 	@Autowired
-	private SqlSession mybatis;
+	private SqlSessionTemplate mybatis;
 	
 	private final String insert_board = "insert into community(num, title, content, image) values"
 			+ " ((select nvl(max(seq),0) + 1 from community),?,?,?)";

@@ -1,12 +1,12 @@
-package com.yorizip.community.board.impl;
+package com.yorizip.myapp.community.Impl;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.yorizip.community.board.communityService;
-import com.yorizip.community.board.communityVO;
+import com.yorizip.myapp.community.board.communityService;
+import com.yorizip.myapp.community.board.communityVO;
 
 @Service("communityService")
 public class communityServiceimpl implements communityService{

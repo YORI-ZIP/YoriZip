@@ -1,4 +1,4 @@
-package com.yorizip.community.board;
+package com.yorizip.myapp.community.board;
 
 import java.util.List;
 
