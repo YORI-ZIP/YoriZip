@@ -4,6 +4,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    background-color: #fff;
 }
 
 /* 헤더 컨테이너 */
@@ -23,6 +24,7 @@ body {
     flex: 1;
     display: flex;
     justify-content: center;
+    
 }
 
 .logo img {
