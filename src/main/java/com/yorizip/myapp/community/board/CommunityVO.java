@@ -4,7 +4,7 @@ import java.util.Date;
 
 import org.springframework.web.multipart.MultipartFile;
 
-public class communityVO {
+public class CommunityVO {
 	private String com_id;
 	private Integer com_num;
 	private String com_title;
@@ -69,5 +69,4 @@ public class communityVO {
 				+ com_content + ", com_image=" + com_image + ", com_ragdate=" + com_ragdate + ", com_update="
 				+ com_update + ", com_like=" + com_like + "]";
 	}
-	
 }

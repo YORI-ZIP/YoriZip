@@ -8,8 +8,8 @@
 	
 	<!-- Alias 설정 -->
 	<typeAliases>
-		<typeAlias alias="community" type="com.yorizip.myapp.communityVO" />
-	</typeAliases>
+      <typeAlias alias="community" type="com.yorizip.myapp.community.board.CommunityVO" />
+   </typeAliases>
 	
 	<!-- DataSource 설정 -->
 	<environments default="development">

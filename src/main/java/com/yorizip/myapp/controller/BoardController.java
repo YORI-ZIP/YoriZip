@@ -7,19 +7,19 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
-import com.yorizip.myapp.community.board.communityService;
-import com.yorizip.myapp.community.board.communityVO;
+import com.yorizip.myapp.community.board.CommunityService;
+import com.yorizip.myapp.community.board.CommunityVO;
 
-@Controller
+//@Controller
 @SessionAttributes("community")
 public class BoardController {
 	
 	@Autowired
-	private communityService communityservice;
+	private CommunityService communityservice;
 	
 	//글 삽입
 	@RequestMapping(value="/insert.do")
-	public String insert(communityVO vo) throws IllegalStateException {
+	public String insert(CommunityVO vo) throws IllegalStateException {
 		
 		communityservice.insert(vo);
 		return "redirect:/myapp/communityList.jsp";
@@ -27,7 +27,7 @@ public class BoardController {
 	
 	//글 수정
 	@RequestMapping("/update.do")
-	public String update(@ModelAttribute("community") communityVO vo) {
+	public String update(@ModelAttribute("community") CommunityVO vo) {
 		
 		System.out.println(vo.getCom_num());
 		System.out.println(vo.getCom_title());
@@ -40,7 +40,7 @@ public class BoardController {
 	
 	// 글 삭제
 	@RequestMapping("/delete.do")
-	public String deleteBoard(communityVO vo) {
+	public String deleteBoard(CommunityVO vo) {
 
 		communityservice.delete(vo);
 		return "redirect:communityList.do";
@@ -48,7 +48,7 @@ public class BoardController {
 		
 	// 글 상세 조회
 	@RequestMapping("/community_view.do")
-	public String community_view(communityVO vo, Model model) {
+	public String community_view(CommunityVO vo, Model model) {
 			
 		model.addAttribute("community", communityservice.community_view(vo));     
 		return "view.jsp";	
@@ -56,7 +56,7 @@ public class BoardController {
 
 //	// 글 목록 검색
 	@RequestMapping("/communityList.do")
-	public String getBoardList(communityVO vo, Model model) {
+	public String getBoardList(CommunityVO vo, Model model) {
 			
 //		if(vo.getSearchCondition() == null) {
 //			vo.setSearchCondition("TITLE");

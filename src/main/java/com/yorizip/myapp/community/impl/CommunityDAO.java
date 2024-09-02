@@ -1,4 +1,4 @@
-package com.yorizip.myapp.community.Impl;
+package com.yorizip.myapp.community.impl;
 
 import java.io.File;
 import java.util.List;
@@ -10,37 +10,37 @@ import org.springframework.stereotype.Repository;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.yorizip.myapp.community.board.SqlSessionFactoryBean;
-import com.yorizip.myapp.community.board.communityVO;
+import com.yorizip.myapp.community.board.CommunityVO;
 
 @Repository
-public class communityDAO {
+public class CommunityDAO {
 	
 	@Autowired
 	private SqlSessionTemplate mybatis;	
 	
-	public void insert(communityVO vo) {
+	public void insert(CommunityVO vo) {
 		
 		System.out.println("===> Mybatis로 insertBoard() 기능 처리");
 		mybatis.insert("communityDAO.insert", vo);
 		
 	}
 
-	public void update(communityVO vo) {
+	public void update(CommunityVO vo) {
 		System.out.println("===> Mybatis로 updateBoard() 기능 처리");
 		mybatis.update("communityDAO.update", vo);
 	}
 
-	public void delete(communityVO vo) {
+	public void delete(CommunityVO vo) {
 		System.out.println("===> Mybatis로 deleteBoard() 기능 처리");
 		mybatis.delete("communityDAO.delete", vo);
 	}
 
-	public communityVO community_view(communityVO vo) {
+	public CommunityVO community_view(CommunityVO vo) {
 		System.out.println("===> Mybatis로 community_view() 기능 처리");
-		return (communityVO) mybatis.selectOne("communityDAO.community_view", vo);
+		return (CommunityVO) mybatis.selectOne("communityDAO.community_view", vo);
 	}
 
-	public List<communityVO> communityList(communityVO vo) {
+	public List<CommunityVO> communityList(CommunityVO vo) {
 		System.out.println("===> Mybatis로 communityList() 기능 처리");
 		return mybatis.selectList("communityDAO.communityList", vo);
 	}
