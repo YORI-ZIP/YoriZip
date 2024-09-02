@@ -22,7 +22,7 @@
 		</div>
 	    <div class="cooking_list_box">
 	        <!-- 모락 모락 쿠킹 일지 -->
-	        <div class="main_title"><a href="communiity.jsp" style="text-decoration-line: none">모락 모락 쿠킹 일지
+	        <div class="main_title"><a href="communiity.do" style="text-decoration-line: none">모락 모락 쿠킹 일지
 	                <span class="main_title_num">123,456</span>
 	                <span class="cooking_daily">></span>
 	            </a>
@@ -30,7 +30,7 @@
 	        <div class="image_box">
 	            <!-- 쿠킹일지 이미지1 -->
 		        <div class="img_box1" >
-		            <a href="view.jsp" style="text-decoration-line: none">
+		            <a href="view.do" style="text-decoration-line: none">
 		            	
 		            </a>
 		        </div>

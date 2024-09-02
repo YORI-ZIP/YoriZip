@@ -12,45 +12,37 @@ import org.springframework.web.multipart.MultipartFile;
 import com.yorizip.myapp.community.board.SqlSessionFactoryBean;
 import com.yorizip.myapp.community.board.communityVO;
 
-@Repository("communityDAO")
+@Repository
 public class communityDAO {
 	
 	@Autowired
-	private SqlSessionTemplate mybatis;
+	private SqlSessionTemplate mybatis;	
 	
-	private final String insert_board = "insert into community(num, title, content, image) values"
-			+ " ((select nvl(max(seq),0) + 1 from community),?,?,?)";
-	
-	private final String update_board = "update community set title=?, content=? where seq=?";
-	private final String delete_board = "delete communityboard where seq=?";
-	private final String getboard = "select * from community where seq=?";
-	private final String getboardList = "select * from community order by seq desc";
-	
-	
-	public void insertBoard(communityVO vo) {
+	public void insert(communityVO vo) {
 		
 		System.out.println("===> Mybatis로 insertBoard() 기능 처리");
-		mybatis.insert("BoardDAO.insertBoard", vo);
+		mybatis.insert("communityDAO.insert", vo);
+		
 	}
 
-	public void updateBoard(communityVO vo) {
+	public void update(communityVO vo) {
 		System.out.println("===> Mybatis로 updateBoard() 기능 처리");
-		mybatis.update("BoardDAO.updateBoard", vo);
+		mybatis.update("communityDAO.update", vo);
 	}
 
-	public void deleteBoard(communityVO vo) {
+	public void delete(communityVO vo) {
 		System.out.println("===> Mybatis로 deleteBoard() 기능 처리");
-		mybatis.delete("BoardDAO.deleteBoard", vo);
+		mybatis.delete("communityDAO.delete", vo);
 	}
 
-	public communityVO getBoard(communityVO vo) {
-		System.out.println("===> Mybatis로 getBoard() 기능 처리");
-		return (communityVO) mybatis.selectOne("BoardDAO.getBoard", vo);
+	public communityVO community_view(communityVO vo) {
+		System.out.println("===> Mybatis로 community_view() 기능 처리");
+		return (communityVO) mybatis.selectOne("communityDAO.community_view", vo);
 	}
 
-	public List<communityVO> getBoardList(communityVO vo) {
-		System.out.println("===> Mybatis로 getBoardList() 기능 처리");
-		return mybatis.selectList("BoardDAO.getBoardList", vo);
+	public List<communityVO> communityList(communityVO vo) {
+		System.out.println("===> Mybatis로 communityList() 기능 처리");
+		return mybatis.selectList("communityDAO.communityList", vo);
 	}
 	
 	

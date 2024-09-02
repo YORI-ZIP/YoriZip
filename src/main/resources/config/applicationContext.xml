@@ -3,3 +3,4 @@
 <bean id="kakaoApiClientId" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
     <property name="location" value="classpath:application.properties"/>
 </bean>
+

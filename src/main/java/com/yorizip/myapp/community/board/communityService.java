@@ -4,17 +4,17 @@ import java.util.List;
 
 public interface communityService {
 	// 글등록
-	void insertBoard(communityVO vo);
+	void insert(communityVO vo);
 	
 	// 글 수정
-	void updateBoard(communityVO vo);
+	void update(communityVO vo);
 	
 	// 글 삭제
-	void deleteBoard(communityVO vo);
+	void delete(communityVO vo);
 	
 	// 글 상세 조회
-	communityVO getBoard(communityVO vo);
+	communityVO community_view(communityVO vo);
 	
 	// 글 목록 조회
-	List<communityVO> getBoardList(communityVO vo);
+	List<communityVO> communityList(communityVO vo);
 }

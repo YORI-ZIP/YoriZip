@@ -19,36 +19,36 @@ public class communityServiceimpl implements communityService{
 	}
 
 	@Override
-	public void insertBoard(communityVO vo) {
+	public void insert(communityVO vo) {
 		
-		communityDAO.insertBoard(vo);
+		communityDAO.insert(vo);
 		
 	}
 
 	@Override
-	public void updateBoard(communityVO vo) {
+	public void update(communityVO vo) {
 
-		communityDAO.updateBoard(vo);
+		communityDAO.update(vo);
 	
 	}
 
 	@Override
-	public void deleteBoard(communityVO vo) {
+	public void delete(communityVO vo) {
 		
-		communityDAO.deleteBoard(vo);
+		communityDAO.delete(vo);
 		
 	}
 
 	@Override
-	public communityVO getBoard(communityVO vo) {
+	public communityVO community_view(communityVO vo) {
 		
-		return communityDAO.getBoard(vo);
+		return communityDAO.community_view(vo);
 	}
 
 	@Override
-	public List<communityVO> getBoardList(communityVO vo) {
+	public List<communityVO> communityList(communityVO vo) {
 		
-		return communityDAO.getBoardList(vo);
+		return communityDAO.communityList(vo);
 	}
 	
 	

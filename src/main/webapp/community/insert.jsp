@@ -12,7 +12,7 @@
 <jsp:include page="/main/header.jsp" />
 </header>
 <article>
-    <form class="container" action="insertBoard.do">
+    <form class="container" action="insert.do" method="post" enctype="multipart/form-data">
 	    <div class="insert_main_title">쿠킹일지</div>
 	    <div class="insert_title">오늘의 쿠킹 일지</div>
 	
@@ -42,10 +42,10 @@
 	    	</div>
 		</div>
 	    <div class="insert_btn_box">
-	        <a href="communitylist.jsp" class="insert_btn_content">작성완료</a>
+	        <button type="submit" class="insert_btn_content">작성완료</button>
 	    </div>
 	    <div class="list_btn_box">
-	        <a href="communitylist.jsp" class="list_content">목록</a>
+	        <a href="communityList.do" class="list_content">목록</a>
 	    </div>
     </form>
 </article>

@@ -4,11 +4,11 @@
 
 <configuration>
 	<!-- Properties 파일 설정 -->
-	<properties resource="db.properties" />
+	<properties resource="config/db.properties" />
 	
 	<!-- Alias 설정 -->
 	<typeAliases>
-		<typeAlias alias="community" type="com.community.board.communityVO" />
+		<typeAlias alias="community" type="com.yorizip.myapp.communityVO" />
 	</typeAliases>
 	
 	<!-- DataSource 설정 -->

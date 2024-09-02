@@ -45,39 +45,39 @@
         <div class="community_list_box">
             <div class="community_list_box1">
                 <div class="community_list1_image" id="opt1">
-                	
+                	<a href="commuinty_view.do"></a>
                 </div>
                 <div class="community_list2_image" id="opt1">
-                	
+                	<a href="commuinty_view.do"></a>
                 </div>
                 <div class="community_list3_image" id="opt1">
-                	
+                	<a href="commuinty_view.do"></a>
                 </div>
                 <div class="community_list4_image" id="opt1">
-                	
+                	<a href="commuinty_view.do"></a>
                 </div>
                 
                 <div class="community_list5_image" id="opt2">
-                	
+                	<a href="commuinty_view.do"></a>
                 </div>
                 <div class="community_list6_image" id="opt2">
-                	
+                	<a href="commuinty_view.do"></a>
                 </div>
                 <div class="community_list7_image" id="opt2">
-                	
+                	<a href="commuinty_view.do"></a>
                 </div>
                 <div class="community_list8_image" id="opt2">
-                	
+                	<a href="commuinty_view.do"></a>
                 </div>
 
                 <div class="community_list9_image" id="opt3">
-                	
+                	<a href="commuinty_view.do"></a>
                 </div>
                 <div class="community_list10_image" id="opt3">
-                	
+                	<a href="commuinty_view.do"></a>
                 </div>
                 <div class="community_list11_image" id="opt3">
-                	
+                	<a href="commuinty_view.do"></a>
                 </div>
                 <div class="community_list12_image" id="opt3">
                 	
