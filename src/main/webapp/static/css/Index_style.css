@@ -1,0 +1,75 @@
+/* 전체 페이지 레이아웃 스타일 */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    
+}
+
+/* 메뉴 추천 섹션 스타일 */
+.menu-recommendation {
+	
+    background: url('/myapp/static/images/cuisine-raffinee.jpg') no-repeat center center/cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    padding: 40px;
+    text-align: center;
+    color: white;
+    margin-top: 50px; /* 헤더와의 간격 조정 */
+    max-width: 800px;
+    width: 1000px;
+    height:500px;
+    margin-bottom:50px;
+    margin-top:50px;
+    margin: auto;
+}
+
+.menu-recommendation h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.menu-recommendation p {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+/* 폼 스타일 */
+.menu-recommendation form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-recommendation select {
+    width: 240px;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 2px solid white;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 18px;
+    text-align: center;
+}
+
+.menu-recommendation button {
+    width: 240px;
+    padding: 12px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #28a745;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.menu-recommendation button:hover {
+    background-color: #218838;
+}
